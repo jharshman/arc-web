@@ -1,4 +1,4 @@
-baseURL = "http://arc-project.io/"
+baseURL = "https://arc-project.io/"
 languageCode = "en-us"
 title = "Arc"
 theme = "minimal"
