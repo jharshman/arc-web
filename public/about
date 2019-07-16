@@ -1,0 +1,8 @@
+---
+title: "About"
+date: 2019-07-15T13:14:36-06:00
+draft: true
+---
+# Arc
+
+Arc is a simple Go template rendering utility developed with the goal of providing software developers a secure method to render templates that may include secrets such as passwords, keys, tokens, and the like. Arc is designed with minimalism as the first and foremost concern.
