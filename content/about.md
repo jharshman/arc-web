@@ -33,6 +33,8 @@ username: '%vault%/secret/credentials'
 password: '%vault%/secret/credentials'
 ```
 
+**Note:** Arc currently only supports token auth for Vault. Future releases will include additional authentication methods.
+
 ## Usage
 
 Basic with no Secret integration.
