@@ -3,6 +3,7 @@ languageCode = "en-us"
 title = "Arc"
 theme = "minimal"
 googleAnalytics = ""
+publishDir = "docs"
 
 [params]
     author = "Josh Harshman"
