@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en-us">
+    <head>
+         
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>About</title>
+        
+        <style>
+
+    html body {
+        font-family: 'Raleway', sans-serif;
+        background-color: white;
+    }
+
+    :root {
+        --accent: red;
+        --border-width:  5px ;
+    }
+
+</style>
+
+
+<link rel="stylesheet" href="http://arc-project.io/css/main.css">
+
+
+
+
+
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+
+
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/solarized-dark.min.css"> 
+
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+ 
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/go.min.js"></script>  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/haskell.min.js"></script>  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/kotlin.min.js"></script>  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/scala.min.js"></script>  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/swift.min.js"></script> 
+
+    <script>hljs.initHighlightingOnLoad();</script>
+
+
+
+
+
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+
+<script>$(document).on('click', function() { $('.collapse').collapse('hide'); })</script>
+ <meta name="generator" content="Hugo 0.56.0-DEV" />
+        
+
+        
+    </head>
+
+    
+    
+    <script type="text/javascript" async
+      src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+    </script>
+    
+
+    <body>
+         
+        <nav class="navbar navbar-default navbar-fixed-top">
+
+            <div class="container">
+
+                <div class="navbar-header">
+
+                    <a class="navbar-brand visible-xs" href="#">About</a>
+
+                    <button class="navbar-toggle" data-target=".navbar-collapse" data-toggle="collapse">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+
+                </div>
+
+                <div class="collapse navbar-collapse">
+
+                    
+                        <ul class="nav navbar-nav">
+                            
+                                <li><a href="/">Home</a></li>
+                            
+                                <li><a href="/about/">About</a></li>
+                            
+                                <li><a href="/downloads/">Downloads</a></li>
+                            
+                        </ul>
+                    
+
+                    
+
+                </div>
+
+            </div>
+
+        </nav>
+
+
+<main>
+
+    <div class="item">
+
+    
+    
+    
+
+    
+    
+
+    <h4><a href="/about/">About</a></h4>
+    <h5>July 15, 2019</h5>
+    
+
+</div>
+
+
+    <br> <div class="text-justify">
+
+<p>Arc is a simple Go template rendering utility developed with the goal of providing software developers a secure method to render templates that may include secrets such as passwords, keys, tokens, and the like. Arc is designed with minimalism as the first and foremost concern.</p>
+
+<h2 id="real-world-example">Real World Example</h2>
+
+<pre><code>$ arc --vars values.yaml ./path/to/templates | kubectl apply -f -
+</code></pre>
+
+<h2 id="vault-secret-storage-integration">Vault Secret Storage Integration</h2>
+
+<p>Secret values can be referenced through the YAML file supplying the values for the templates.
+To reference a secret in Vault, it must be in the form of <code>key: '%vault%/path'</code>.  The <code>%vault%</code> designation instructs Arc that this value is a secret that needs to be resolved to it&rsquo;s proper value.  The path following the <code>%vault%</code> designation is that path to the secret stored within Vault.  Since there can be many key/value pairs under one path, the <code>key</code> corresponds to which field Arc should retrieve from the path.</p>
+
+<p>Take for example, the following secret in Vault</p>
+
+<pre><code>$ vault kv get secret/credentials
+...
+
+====== Data ======
+Key         Value
+---         -----
+username    jharshman
+password    P@SSW0RD1
+</code></pre>
+
+<p>To reference these values in your YAML, you would do the following:</p>
+
+<pre><code>username: '%vault%/secret/credentials'
+password: '%vault%/secret/credentials'
+</code></pre>
+
+<p><strong>Note:</strong> Arc currently only supports token auth for Vault. Future releases will include additional authentication methods.</p>
+
+<h2 id="usage">Usage</h2>
+
+<p>Basic with no Secret integration.</p>
+
+<pre><code>$ arc --vars values.yaml .
+</code></pre>
+
+<p>To take advantage of Arc&rsquo;s integration with Vault, you will need to supply Arc with some configuration properties.</p>
+
+<pre><code>$ cat &lt;&lt; EOF &gt; ~/.arc.yaml
+---
+VaultAddr: &quot;https://vault.example.com:8200&quot;
+VaultToken: &quot;your vault token&quot;
+EOF
+</code></pre>
+
+<p>Alternatively, you can also provide these values to Arc by exporting them in your Shell.</p>
+
+<p>Once that is complete you can run Arc as before.  Since the configuration file we created is located in the home directory, Arc will find it automatically without needing to be explicit with the <code>--config</code> flag.  This option is shown below for demonstration sake.</p>
+
+<pre><code>$ arc --config ~/.arc.yaml --vars values.yaml .
+</code></pre>
+</div>
+
+    
+    
+
+    
+
+    
+
+</main>
+
+        <footer>
+
+            <p class="copyright text-muted">&copy; All rights reserved. Powered by <a href="https://gohugo.io">Hugo</a> and <a href="https://github.com/calintat/minimal">Minimal</a></p>
+
+        </footer>
+       
+    </body>
+
+</html>
+

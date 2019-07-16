@@ -1,7 +1,7 @@
 ---
 title: "Downloads"
 date: 2019-07-15T15:18:32-06:00
-draft: true
+draft: false
 ---
 
 Thank you for giving Arc a try! If you have feedback feel free to drop us a line at [product@arc-project.io](mailto:product@arc-project.io)
