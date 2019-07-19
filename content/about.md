@@ -29,8 +29,8 @@ password    P@SSW0RD1
 
 To reference these values in your YAML, you would do the following:
 ```
-username: '%vault%/secret/credentials'
-password: '%vault%/secret/credentials'
+username: '%vault%/secret/data/credentials'
+password: '%vault%/secret/data/credentials'
 ```
 
 **Note:** Arc currently only supports token auth for Vault. Future releases will include additional authentication methods.
