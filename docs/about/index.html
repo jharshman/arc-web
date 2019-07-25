@@ -184,11 +184,11 @@ password: '%vault%/secret/data/credentials'
 <pre><code>$ cat &lt;&lt; EOF &gt; ~/.arc.yaml
 ---
 VaultAddr: &quot;https://vault.example.com:8200&quot;
-VaultToken: &quot;your vault token&quot;
+Auth:
+  Method: token
+  Token: &quot;&lt;your vault token&gt;&quot;
 EOF
 </code></pre>
-
-<p>Alternatively, you can also provide these values to Arc by exporting them in your Shell.</p>
 
 <p>Once that is complete you can run Arc as before.  Since the configuration file we created is located in the home directory, Arc will find it automatically without needing to be explicit with the <code>--config</code> flag.  This option is shown below for demonstration sake.</p>
 

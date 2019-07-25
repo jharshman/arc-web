@@ -52,11 +52,11 @@ To take advantage of Arc's integration with Vault, you will need to supply Arc w
 $ cat << EOF > ~/.arc.yaml
 ---
 VaultAddr: "https://vault.example.com:8200"
-VaultToken: "your vault token"
+Auth:
+  Method: token
+  Token: "<your vault token>"
 EOF
 ```
-
-Alternatively, you can also provide these values to Arc by exporting them in your Shell.
 
 Once that is complete you can run Arc as before.  Since the configuration file we created is located in the home directory, Arc will find it automatically without needing to be explicit with the `--config` flag.  This option is shown below for demonstration sake.
 ```
