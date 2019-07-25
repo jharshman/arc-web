@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Auth-methods on Arc</title>
+    <link>https://arc-project.io/auth-methods/</link>
+    <description>Recent content in Auth-methods on Arc</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Thu, 25 Jul 2019 14:34:39 -0600</lastBuildDate>
+    
+	<atom:link href="https://arc-project.io/auth-methods/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Token Auth</title>
+      <link>https://arc-project.io/auth-methods/token/</link>
+      <pubDate>Thu, 25 Jul 2019 14:34:39 -0600</pubDate>
+      
+      <guid>https://arc-project.io/auth-methods/token/</guid>
+      <description> Arc supports Vault&amp;rsquo;s default [token auth method](). Token authentication is built-in to Vault, and requires no extra setup on your instance to start using it with Arc.
+Example arc.yaml VaultAddr: &amp;quot;https://vault.example.com:8200&amp;quot; Auth: Method: token Token: &amp;quot;&amp;lt;vault token&amp;gt;&amp;quot;  </description>
+    </item>
+    
+    <item>
+      <title>Github Auth</title>
+      <link>https://arc-project.io/auth-methods/github/</link>
+      <pubDate>Thu, 25 Jul 2019 14:34:33 -0600</pubDate>
+      
+      <guid>https://arc-project.io/auth-methods/github/</guid>
+      <description> Arc supports Vault&amp;rsquo;s GitHub Auth Backend. Below is an example configuration for using the GitHub auth method.
+Example arc.yaml VaultAddr: &amp;quot;https://vault.example.com:8200&amp;quot; Auth: Method: github Token: &amp;quot;&amp;lt;github personal access token&amp;gt;&amp;quot;  </description>
+    </item>
+    
+    <item>
+      <title>Okta Auth</title>
+      <link>https://arc-project.io/auth-methods/okta/</link>
+      <pubDate>Thu, 25 Jul 2019 14:34:28 -0600</pubDate>
+      
+      <guid>https://arc-project.io/auth-methods/okta/</guid>
+      <description> Arc supports Vault&amp;rsquo;s Okta Auth Backend. Below is an example configuration for using the Okta auth method.
+Example arc.yaml VaultAddr: &amp;quot;https://vault.example.com:8200&amp;quot; Auth: Method: okta Username: &amp;quot;&amp;lt;okta username&amp;gt;&amp;quot; Password: &amp;quot;&amp;lt;okta password&amp;gt;&amp;quot;  </description>
+    </item>
+    
+    <item>
+      <title>JWT/OIDC Auth</title>
+      <link>https://arc-project.io/auth-methods/jwt/</link>
+      <pubDate>Thu, 25 Jul 2019 14:34:23 -0600</pubDate>
+      
+      <guid>https://arc-project.io/auth-methods/jwt/</guid>
+      <description> Arc supports Vault&amp;rsquo;s JWT/OIDC Auth Backend. Below is an example configuration for using the JWT auth method.
+Example arc.yaml VaultAddr: &amp;quot;https://vault.example.com:8200&amp;quot; Auth: Method: jwt Role: &amp;quot;&amp;lt;jwt/oidc role&amp;gt;&amp;quot; Token: &amp;quot;&amp;lt;jwt/oidc token&amp;gt;&amp;quot;  </description>
+    </item>
+    
+  </channel>
+</rss>

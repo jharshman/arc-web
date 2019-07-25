@@ -4,8 +4,34 @@
   
   <url>
     <loc>https://arc-project.io/</loc>
-    <lastmod>2019-07-15T15:18:32-06:00</lastmod>
+    <lastmod>2019-07-25T14:34:39-06:00</lastmod>
     <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://arc-project.io/auth-methods/</loc>
+    <lastmod>2019-07-25T14:34:39-06:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://arc-project.io/auth-methods/token/</loc>
+    <lastmod>2019-07-25T14:34:39-06:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://arc-project.io/auth-methods/github/</loc>
+    <lastmod>2019-07-25T14:34:33-06:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://arc-project.io/auth-methods/okta/</loc>
+    <lastmod>2019-07-25T14:34:28-06:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://arc-project.io/auth-methods/jwt/</loc>
+    <lastmod>2019-07-25T14:34:23-06:00</lastmod>
   </url>
   
   <url>

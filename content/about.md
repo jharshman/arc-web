@@ -33,7 +33,12 @@ username: '%vault%/secret/data/credentials'
 password: '%vault%/secret/data/credentials'
 ```
 
-**Note:** Arc currently only supports token auth for Vault. Future releases will include additional authentication methods.
+### Supported Vault Auth Methods
+
+  * [Token]( {{< ref "auth-methods/token.md" >}})
+  * [JWT/OIDC]( {{< ref "auth-methods/jwt.md" >}} )
+  * [GitHub]( {{< ref "auth-methods/github.md" >}})
+  * [Okta]( {{< ref "auth-methods/okta.md" >}} )
 
 ## Usage
 
