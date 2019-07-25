@@ -42,7 +42,6 @@ password: '%vault%/secret/data/credentials'
 
 ## Usage
 
-Basic with no Secret integration.
 ```
 $ arc --vars values.yaml .
 ```
